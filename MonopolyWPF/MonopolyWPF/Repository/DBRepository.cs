@@ -1,8 +1,6 @@
 ﻿using MonopolyWPF.DB;
 using System;
-using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Linq;
 using System.Data.Entity;
 
 
@@ -29,6 +27,7 @@ namespace Monopoly.Repository
 			CreateBoxes();
 			CreatePallets();
 			CountParameters();
+			CheckSize();
 		}
 
 		/// <summary>
