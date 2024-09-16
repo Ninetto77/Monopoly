@@ -1,1 +1,31 @@
 # Monopoly
+
+## Создание БД коробок
+CREATE TABLE [dbo].[Box] (
+    [Id]             INT        IDENTITY (1, 1) NOT NULL,
+    [Weight]         FLOAT (53) NOT NULL,
+    [Length]         FLOAT (53) NOT NULL,
+    [Width]          FLOAT (53) NOT NULL,
+    [Depth]          FLOAT (53) NOT NULL,
+    [DataProduction] DATE       NOT NULL,
+    [DataExpiration] DATE       NULL,
+    [PalletID]       INT        NOT NULL,
+    [Volume]         FLOAT (53) NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+## Создание БД паллетов
+CREATE TABLE [dbo].[Pallet] (
+    [Id]             INT        IDENTITY (1, 1) NOT NULL,
+    [Weight]         FLOAT (53) NULL,
+    [Length]         FLOAT (53) NOT NULL,
+    [Width]          FLOAT (53) NOT NULL,
+    [Depth]          FLOAT (53) NOT NULL,
+    [DataProduction] DATE       NOT NULL,
+    [DataExpiration] DATE       NULL,
+    [Volume]         FLOAT (53) NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+## Замечания
+На более позднем этапе поняла, что можно использовать дополнительную таблицу БД, который хранил бы в себе ID коробки и соотвественно его паллета. 
